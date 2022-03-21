@@ -95,7 +95,7 @@ const SIXTYFOUR_SIXTYFOUR = () => {
     defaultGrid = SIXTYFOUR_SIXTYFOUR;
 }
 
-let defaultGrid = SIXTEEN_SIXTEEN;
+let defaultGrid = EIGHT_EIGHT;
 window.onload = defaultGrid;
 
 const reset = document.querySelector('#reset');
