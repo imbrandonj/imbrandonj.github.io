@@ -1,0 +1,130 @@
+body {
+    background-color: aliceblue;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+    ". . . . header header . . . ."
+    "colorPicker colorPicker gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer reset reset"
+    "colorPicker colorPicker gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer buttons buttons"
+    ". . gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer buttons buttons"
+    ". . gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer buttons buttons"
+    "github github gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer buttons buttons"
+    "github github gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer buttons buttons"
+    ". . gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer . ."
+    ". . gridContainer gridContainer gridContainer gridContainer gridContainer gridContainer . ."
+}
+
+.header {
+    grid-area: header;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 1.5em;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.colorPicker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: colorPicker;
+    text-align: center;
+    margin-top: 4rem;
+    line-height: 2.2em;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#colorPicker {
+    align-self: center;
+    width: 30%;
+    height: 3.5em;
+}
+
+.github {
+    grid-area: github;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#github {
+    text-align: center;
+    font-size: 4em;
+    width: 30%;
+    color: black;
+}
+
+
+a:hover {
+    background: rgba(0,0,0, 0.6);
+    border-radius: .5em;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#reset {
+    grid-area: reset;
+    margin-bottom: 2em;
+}
+
+button {
+    width: 30%;
+    margin: 0.5em;
+    padding: 1em 0;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: white;
+}
+
+button:hover {
+    background: rgba(0,0,0, 0.6);
+}
+
+.gridContainer {
+    grid-area: gridContainer;
+    display: grid;
+    border: 1px solid black;
+    height: 48rem;
+    
+}
+
+.eight_eight {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.sixteen_sixteen {
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+}
+
+.thirtytwo_thirtytwo {
+    grid-template-columns: repeat(32, 1fr);
+    grid-template-rows: repeat(32, 1fr);
+}
+
+.sixtyfour_sixtyfour {
+    grid-template-columns: repeat(64, 1fr);
+    grid-template-rows: repeat(64, 1fr);
+}
+
+.gridBox {
+    border: 0.1em solid black;
+    background-color: white;
+}
+
